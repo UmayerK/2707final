@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Espresso Machine Model X",
+        "options": ["Color: Black", "Voltage: 110V/220V"],
+        "image": "images/espresso_machine_x.jpg",
+        "description": "A top-of-the-line espresso machine for home baristas."
+    },
+    {
+        "id": 2,
+        "name": "Professional Coffee Grinder Pro",
+        "options": ["Color: Silver/Black", "Grind Settings: 40 levels"],
+        "image": "images/grinder_pro.jpg",
+        "description": "Commercial-grade burr grinder with precision settings."
+    },
+    {
+        "id": 3,
+        "name": "Pour-Over Coffee Kit",
+        "options": ["Material: Glass/Wood", "Size: 500ml/800ml"],
+        "image": "images/pour_over_kit.jpg",
+        "description": "Complete pour-over setup with stand and premium filters."
+    },
+    {
+        "id": 4,
+        "name": "Smart Coffee Scale",
+        "options": ["Color: Black", "Units: g/oz"],
+        "image": "images/smart_scale.jpg",
+        "description": "Bluetooth-enabled scale with timing and weight tracking."
+    },
+    {
+        "id": 5,
+        "name": "Milk Frother Deluxe",
+        "options": ["Temperature Control", "Capacity: 500ml"],
+        "image": "images/milk_frother.jpg",
+        "description": "Automatic milk frother with multiple foam settings."
+    },
+    {
+        "id": 6,
+        "name": "Cold Brew System",
+        "options": ["Size: 1L/2L", "Filter Type: Metal/Paper"],
+        "image": "images/cold_brew.jpg",
+        "description": "Professional cold brew coffee maker with precision filter."
+    },
+    {
+        "id": 7,
+        "name": "Coffee Bean Storage Vault",
+        "options": ["Size: 500g/1kg", "Material: Stainless Steel"],
+        "image": "images/storage_vault.jpg",
+        "description": "Airtight container with CO2 release valve."
+    },
+    {
+        "id": 8,
+        "name": "Barista Tool Kit",
+        "options": ["15-piece set", "Case Color: Brown/Black"],
+        "image": "images/barista_kit.jpg",
+        "description": "Complete set of professional barista tools."
+    },
+    {
+        "id": 9,
+        "name": "Premium Coffee Server",
+        "options": ["Size: 600ml/800ml", "Material: Glass"],
+        "image": "images/coffee_server.jpg",
+        "description": "Double-wall thermal server with precision spout."
+    },
+    {
+        "id": 10,
+        "name": "Precision Tamper",
+        "options": ["Size: 58mm/54mm", "Handle: Wood/Steel"],
+        "image": "images/tamper.jpg",
+        "description": "Calibrated tamper for consistent espresso preparation."
+    },
+    {
+        "id": 11,
+        "name": "Coffee Roasting Machine",
+        "options": ["Capacity: 250g/500g", "Power: 110V/220V"],
+        "image": "images/roaster.jpg",
+        "description": "Home coffee roaster with digital temperature control."
+    },
+    {
+        "id": 12,
+        "name": "Gooseneck Kettle",
+        "options": ["Capacity: 700ml", "Temperature Control"],
+        "image": "images/kettle.jpg",
+        "description": "Electric kettle with precise pour control."
+    },
+    {
+        "id": 13,
+        "name": "Coffee Filter Set",
+        "options": ["Size: Various", "Material: Metal/Paper"],
+        "image": "images/filters.jpg",
+        "description": "Premium reusable and disposable filter collection."
+    },
+    {
+        "id": 14,
+        "name": "Espresso Shot Glasses",
+        "options": ["Size: 2oz/3oz", "Set of 4/6"],
+        "image": "images/shot_glasses.jpg",
+        "description": "Calibrated shot glasses for precise measurements."
+    },
+    {
+        "id": 15,
+        "name": "Coffee Distribution Tool",
+        "options": ["Size: 58mm/54mm", "Adjustable Depth"],
+        "image": "images/distribution_tool.jpg",
+        "description": "Professional coffee leveler for consistent extraction."
+    },
+    {
+        "id": 16,
+        "name": "Cleaning Kit Deluxe",
+        "options": ["Includes Detergent", "Brush Set"],
+        "image": "images/cleaning_kit.jpg",
+        "description": "Complete maintenance kit for coffee equipment."
+    },
+    {
+        "id": 17,
+        "name": "Coffee Bean Sampler",
+        "options": ["Origins: Various", "Roast: Light/Medium/Dark"],
+        "image": "images/bean_sampler.jpg",
+        "description": "Curated selection of premium coffee beans."
+    },
+    {
+        "id": 18,
+        "name": "Latte Art Pitchers",
+        "options": ["Size: 350ml/600ml", "Set of 2"],
+        "image": "images/latte_pitchers.jpg",
+        "description": "Professional milk pitchers for perfect microfoam."
+    },
+    {
+        "id": 19,
+        "name": "Coffee Knock Box",
+        "options": ["Size: Standard/Large", "Material: Steel"],
+        "image": "images/knock_box.jpg",
+        "description": "Durable knock box for spent coffee grounds."
+    },
+    {
+        "id": 20,
+        "name": "Water Filter System",
+        "options": ["Capacity: 2L/4L", "Filter Life: 6 months"],
+        "image": "images/water_filter.jpg",
+        "description": "Specialized water filtration for optimal coffee brewing."
+    }
+]

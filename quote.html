@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Quote | Luxury Watches</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Include the same navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Copy the entire navbar from index.html -->
+        </nav>
+    </header>
+
+    <main class="quote-content">
+        <section class="quote-hero">
+            <h1>Get a Custom Quote</h1>
+            <p>Configure your perfect timepiece and receive a personalized quote</p>
+        </section>
+
+        <form class="quote-form">
+            <div class="product-selection">
+                <h2>Select Your Watch</h2>
+                <div class="form-group">
+                    <label for="brand">Brand</label>
+                    <select id="brand" name="brand" required>
+                        <option value="">Select a Brand</option>
+                        <option value="rolex">Rolex</option>
+                        <option value="patek">Patek Philippe</option>
+                        <option value="ap">Audemars Piguet</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <select id="model" name="model" required>
+                        <option value="">Select a Model</option>
+                        <!-- Options will be populated via JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Size</label>
+                    <select id="size" name="size" required>
+                        <option value="">Select Size</option>
+                        <!-- Options will be populated via JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="material">Case Material</label>
+                    <select id="material" name="material" required>
+                        <option value="">Select Material</option>
+                        <!-- Options will be populated via JavaScript -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="customer-details">
+                <h2>Your Information</h2>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Quote</button>
+        </form>
+    </main>
+
+    <footer>
+        <!-- Add your footer content -->
+    </footer>
+</body>
+</html>
