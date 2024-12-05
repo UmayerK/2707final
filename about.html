@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Luxury Watches</title>
+    <title>Our Story | Luxury Timepieces</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -19,15 +20,10 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li class="dropdown">
                     <a href="products.html">Products</a>
-                    <div class="dropdown-content">
-                        <a href="products.html#new-arrivals">New Arrivals</a>
-                        <a href="products.html#luxury">Luxury Collection</a>
-                        <a href="products.html#sport">Sport Watches</a>
-                        <a href="products.html#classic">Classic Timepieces</a>
-                    </div>
+                
                 </li>
                 <li><a href="quote.html">Calculate Quote</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -42,28 +38,88 @@
         </nav>
     </header>
 
-    <main class="about-content">
+    <main class="about-container">
         <section class="about-hero">
-            <h1>Our Story</h1>
-            <p>Delivering excellence in luxury timepieces since 1990</p>
-        </section>
-
-        <section class="our-mission">
-            <h2>Our Mission</h2>
-            <p>We strive to provide the finest selection of luxury watches...</p>
-        </section>
-
-        <section class="team">
-            <h2>Our Team</h2>
-            <div class="team-grid">
-                <!-- Team members -->
+            <h1>A Legacy of Timeless Excellence</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">Founded in 1985 by master horologist Marcus Zeitgeist, our journey began in a small workshop in Geneva's historic watchmaking district.</p>
+                    <p>What started as a passionate pursuit of perfection has evolved into one of the world's most respected luxury timepiece establishments, serving distinguished collectors and connoisseurs across the globe.</p>
+                </div>
             </div>
         </section>
 
-        <section class="values">
-            <h2>Our Values</h2>
-            <div class="values-grid">
-                <!-- Company values -->
+        <section class="story-section">
+            <div class="story-grid">
+                <div class="story-text">
+                    <h2>Our Heritage</h2>
+                    <p>For over three decades, we've been at the forefront of luxury timepiece curation. Our expertise spans from vintage masterpieces to contemporary innovations, each piece telling its own unique story of craftsmanship and excellence.</p>
+                    <p>In 1992, we made history by restoring the legendary Celestial Chronograph for the Royal Collection, cementing our reputation as master craftsmen. Today, our restoration workshop handles fewer than 100 pieces annually, ensuring each timepiece receives the attention it deserves.</p>
+                </div>
+                <div class="story-image">
+                    <img src="./images/workshop.jpg" alt="Master watchmaker at work" class="floating-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>The Art of Precision</h2>
+            <p class="section-subtitle">Experience the meticulous craftsmanship behind every timepiece</p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/TELYvXbm9SI" 
+                    title="Luxury Watch Craftsmanship" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="expertise-section">
+            <h2>Our Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Authentication</h3>
+                    <p>Our team of certified experts performs rigorous authenticity checks on every timepiece, ensuring each watch meets our exceptional standards.</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Restoration</h3>
+                    <p>Our master watchmakers have restored pieces for museums, royal families, and private collectors worldwide, preserving horological history.</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Guarantee</h3>
+                    <p>Every timepiece comes with our lifetime authenticity guarantee and two years of complimentary maintenance service.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="milestones-section">
+            <h2>Key Milestones</h2>
+            <div class="timeline">
+                <div class="milestone">
+                    <span class="year">1985</span>
+                    <h3>Foundation</h3>
+                    <p>Established in Geneva's historic watchmaking district</p>
+                </div>
+                <div class="milestone">
+                    <span class="year">1992</span>
+                    <h3>Royal Recognition</h3>
+                    <p>Restoration of the Celestial Chronograph</p>
+                </div>
+                <div class="milestone">
+                    <span class="year">2005</span>
+                    <h3>Global Expansion</h3>
+                    <p>Opening of our 10th international boutique</p>
+                </div>
+                <div class="milestone">
+                    <span class="year">2023</span>
+                    <h3>Innovation</h3>
+                    <p>Launch of our digital authentication platform</p>
+                </div>
             </div>
         </section>
     </main>

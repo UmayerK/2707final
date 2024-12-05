@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Luxury Watches</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Include the same navbar as index.html -->
     <header>
         <nav class="navbar">
-            <!-- Copy the entire navbar from index.html -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/images.jpeg" alt="Luxury Watches Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="products.html">Products</a>
+                </li>
+                <li><a href="quote.html">Calculate Quote</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="news.html">Industry News</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <main class="contact-content">
         <section class="contact-hero">
             <h1>Get in Touch</h1>
-            <p>We're here to help with any questions about our luxury timepieces</p>
+            <p>We're here to assist you with any inquiries about our luxury timepieces</p>
         </section>
 
         <div class="contact-container">
@@ -42,6 +63,12 @@
                         <h3>Business Hours</h3>
                         <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                         <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>123 Luxury Avenue</p>
+                        <p>New York, NY 10001</p>
                     </div>
                 </div>
             </section>

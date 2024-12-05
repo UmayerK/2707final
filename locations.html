@@ -3,22 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products | Luxury Watches</title>
+    <title>Our Locations | Luxury Watches</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
     <script src="script.js" defer></script>
+    <script src="locations.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <!-- Copy entire navbar code here -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/images.jpeg" alt="Luxury Watches Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="products.html">Products</a>
+                </li>
+                <li><a href="quote.html">Calculate Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="locations.html" class="active">Locations</a></li>
+                <li><a href="news.html">Industry News</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <!-- Page content -->
-    <main class="products-content">
-        <!-- Your products page content -->
+    <main class="locations-content">
+        <section class="locations-hero">
+            <h1>Find Our Nearest Location</h1>
+            <p>Discover our exclusive boutiques near beautiful waterfront locations</p>
+        </section>
+
+        <div class="location-container">
+            <div class="location-finder">
+                <button id="getLocation" class="location-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Find Nearest Location
+                </button>
+                <div id="locationStatus" class="location-status"></div>
+            </div>
+
+            <div id="locationResult" class="location-result">
+                <!-- Results will be dynamically inserted here -->
+            </div>
+        </div>
     </main>
 </body>
 </html>

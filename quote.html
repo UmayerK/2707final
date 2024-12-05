@@ -5,58 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculate Quote | Luxury Watches</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
+    <script src="quote.js" defer></script>
 </head>
 <body>
-    <!-- Include the same navbar -->
     <header>
         <nav class="navbar">
-            <!-- Copy the entire navbar from index.html -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/images.jpeg" alt="Luxury Watches Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="products.html">Products</a>
+                </li>
+                <li><a href="quote.html" class="active">Calculate Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="news.html">Industry News</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <main class="quote-content">
         <section class="quote-hero">
             <h1>Get a Custom Quote</h1>
-            <p>Configure your perfect timepiece and receive a personalized quote</p>
+            <p>Configure your perfect timepiece and receive an instant quote</p>
         </section>
 
-        <form class="quote-form">
+        <form class="quote-form" id="quoteForm">
             <div class="product-selection">
                 <h2>Select Your Watch</h2>
                 <div class="form-group">
-                    <label for="brand">Brand</label>
-                    <select id="brand" name="brand" required>
-                        <option value="">Select a Brand</option>
-                        <option value="rolex">Rolex</option>
-                        <option value="patek">Patek Philippe</option>
-                        <option value="ap">Audemars Piguet</option>
-                        <!-- Add more options -->
+                    <label for="watch-model">Watch Model</label>
+                    <select id="watch-model" name="watch-model" required>
+                        <option value="">Select a Watch</option>
+                        <option value="chronograph" data-price="15000">Chronograph Master - $15,000</option>
+                        <option value="ocean" data-price="12000">Ocean Navigator - $12,000</option>
+                        <option value="celestial" data-price="25000">Celestial Moonphase - $25,000</option>
+                        <option value="pilot" data-price="18000">Pilot's Chronometer - $18,000</option>
+                        <option value="tourbillon" data-price="95000">Grand Tourbillon - $95,000</option>
+                        <option value="perpetual" data-price="45000">Classic Perpetual - $45,000</option>
+                        <option value="sport" data-price="22000">Sport Chronograph - $22,000</option>
+                        <option value="vintage" data-price="35000">Vintage Heritage - $35,000</option>
+                        <option value="diamond" data-price="75000">Diamond Elegance - $75,000</option>
+                        <option value="gmt" data-price="28000">GMT Master - $28,000</option>
+                        <option value="skeleton" data-price="42000">Skeleton Art - $42,000</option>
+                        <option value="deep" data-price="32000">Deep Sea - $32,000</option>
+                        <option value="royal" data-price="85000">Royal Oak - $85,000</option>
+                        <option value="minimalist" data-price="19000">Minimalist - $19,000</option>
+                        <option value="worldtimer" data-price="48000">World Timer - $48,000</option>
+                        <option value="rosegold" data-price="55000">Rose Gold Classic - $55,000</option>
+                        <option value="platinum" data-price="120000">Platinum Elite - $120,000</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="model">Model</label>
-                    <select id="model" name="model" required>
-                        <option value="">Select a Model</option>
-                        <!-- Options will be populated via JavaScript -->
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="size">Size</label>
-                    <select id="size" name="size" required>
-                        <option value="">Select Size</option>
-                        <!-- Options will be populated via JavaScript -->
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="material">Case Material</label>
-                    <select id="material" name="material" required>
+                    <label for="band-material">Band Material</label>
+                    <select id="band-material" name="band-material" required>
                         <option value="">Select Material</option>
-                        <!-- Options will be populated via JavaScript -->
+                        <option value="leather" data-price="0">Premium Leather (Included)</option>
+                        <option value="steel" data-price="500">Stainless Steel (+$500)</option>
+                        <option value="gold" data-price="2000">18K Gold (+$2,000)</option>
+                        <option value="platinum" data-price="3500">Platinum (+$3,500)</option>
                     </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="band-size">Band Size</label>
+                    <select id="band-size" name="band-size" required>
+                        <option value="">Select Size</option>
+                        <option value="small">Small (165-180mm)</option>
+                        <option value="medium">Medium (180-195mm)</option>
+                        <option value="large">Large (195-210mm)</option>
+                    </select>
+                </div>
+
+                <div class="price-summary">
+                    <h3>Price Summary</h3>
+                    <div class="price-breakdown">
+                        <p>Base Price: <span id="basePrice">$0</span></p>
+                        <p>Band Material: <span id="bandPrice">$0</span></p>
+                        <hr>
+                        <p class="total">Total Price: <span id="totalPrice">$0</span></p>
+                    </div>
                 </div>
             </div>
 
@@ -80,12 +122,8 @@
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Request Quote</button>
+            <button type="submit" class="submit-btn">Get Quote</button>
         </form>
     </main>
-
-    <footer>
-        <!-- Add your footer content -->
-    </footer>
 </body>
 </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Sea | Luxury Watches</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/images.jpeg" alt="Luxury Watches Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="../products.html" class="active">Products</a>
+                </li>
+                <li><a href="../quote.html">Calculate Quote</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../locations.html">Locations</a></li>
+                <li><a href="../news.html">Industry News</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-detail-container">
+        <div class="product-gallery">
+            <img src="../images/h13.jpg" alt="Deep Sea" class="product-showcase">
+        </div>
+        <div class="product-info">
+            <h1 class="product-title">Deep Sea</h1>
+            <p class="product-tagline">Professional Diving</p>
+            <div class="product-description">
+                <p>
+                    The Deep Sea is engineered for extreme underwater exploration. This professional diving watch includes:
+                </p>
+                <ul class="features-list">
+                    <li>1000m water resistance</li>
+                    <li>Helium escape valve</li>
+                    <li>Ceramic bezel insert</li>
+                </ul>
+            </div>
+            <div class="product-actions">
+                <div class="size-and-quantity">
+                    <div class="watch-size-selector">
+                        <label for="watch-size">Size:</label>
+                        <select id="watch-size" class="watch-size-select">
+                            <option value="small">34mm</option>
+                            <option value="medium" selected>38mm</option>
+                            <option value="large">42mm</option>
+                        </select>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus-btn"><i class="fas fa-minus"></i></button>
+                        <span class="quantity">1</span>
+                        <button class="quantity-btn plus-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <button class="add-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

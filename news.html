@@ -6,67 +6,47 @@
     <title>Industry News | Luxury Watches</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
+    <script src="news.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <!-- Copy entire navbar code here -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/images.jpeg" alt="Luxury Watches Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="products.html">Products</a>
+                </li>
+                <li><a href="quote.html">Calculate Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="news.html" class="active">Industry News</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <!-- Page content -->
     <main class="news-content">
         <section class="news-hero">
             <h1>Industry News & Updates</h1>
             <p>Stay informed about the latest developments in the luxury watch industry</p>
         </section>
 
-        <section class="news-grid">
-            <article class="news-item">
-                <img src="images/news1.jpg" alt="New Watch Release">
-                <div class="news-text">
-                    <span class="date">March 15, 2024</span>
-                    <h2>Patek Philippe Announces New Nautilus Models</h2>
-                    <p>The legendary watchmaker expands its iconic collection with three new references...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </article>
-
-            <article class="news-item">
-                <img src="images/news2.jpg" alt="Watch Exhibition">
-                <div class="news-text">
-                    <span class="date">March 12, 2024</span>
-                    <h2>Watches & Wonders 2024: What to Expect</h2>
-                    <p>Preview of the upcoming international watch fair in Geneva...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </article>
-
-            <article class="news-item">
-                <img src="images/news3.jpg" alt="Market Trends">
-                <div class="news-text">
-                    <span class="date">March 10, 2024</span>
-                    <h2>Luxury Watch Market Trends 2024</h2>
-                    <p>Analysis of current market trends and future predictions...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </article>
-        </section>
-
-        <section class="newsletter-signup">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to our newsletter for the latest industry news</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
+        <div class="news-grid" id="newsContainer">
+            <!-- News articles will be dynamically inserted here -->
+            <div class="loading">Loading latest news...</div>
+        </div>
     </main>
-
-    <footer>
-        <!-- Add your footer content -->
-    </footer>
 </body>
 </html>
