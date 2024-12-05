@@ -1702,3 +1702,244 @@ select option {
 .dark-theme .news-text p {
     color: #aaa;
 }
+
+/* Help Center Styles */
+.help-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: white;
+    margin-bottom: 40px;
+}
+
+.help-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.help-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+}
+
+.help-card i {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.help-card h2 {
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.help-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.help-card li {
+    padding: 5px 0;
+    color: #666;
+}
+
+.help-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.help-contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f8f8;
+    margin-top: 40px;
+}
+
+/* Dark Theme Support */
+.dark-theme .help-card {
+    background: #2d2d2d;
+}
+
+.dark-theme .help-card h2 {
+    color: #fff;
+}
+
+.dark-theme .help-card li {
+    color: #ccc;
+}
+
+.dark-theme .help-contact {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+/* Location Card Styles */
+.location-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.location-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.location-card h3 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+.weather-info img {
+    width: 50px;
+    height: 50px;
+}
+
+.store-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.store-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.store-info i {
+    color: #4CAF50;
+}
+
+/* Dark Theme Support */
+.dark-theme .location-card {
+    background: #2d2d2d;
+}
+
+.dark-theme .weather-info {
+    background: #1a1a1a;
+}
+
+.dark-theme .location-card h2,
+.dark-theme .location-card p {
+    color: #fff;
+}
+
+/* Location Search Styles */
+.location-search {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #4CAF50;
+}
+
+.search-button {
+    padding: 12px 25px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background: #45a049;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Dark Theme Support */
+.dark-theme .search-box input {
+    background: #2d2d2d;
+    border-color: #444;
+    color: #fff;
+}
+
+.dark-theme .search-box input:focus {
+    border-color: #4CAF50;
+}
+
+.generated-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.generated-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background: #1557b0;
+}

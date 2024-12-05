@@ -1,102 +1,120 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const apiKey = '071e0ef2abeddaba3d9488779a5c7f3e';
-    const getLocationBtn = document.getElementById('getLocation');
-    const locationStatus = document.getElementById('locationStatus');
-    const locationResult = document.getElementById('locationResult');
-    let map;
-    let marker;
+// API credentials
+const API_ID = '27592b62-0735-4a6e-ab3a-22712065e7b5';
+const API_KEY = '88382185-0200-4642-8d99-d144e293e1a9';
 
-    // Initialize Google Maps
-    function initMap(lat, lon) {
-        const mapOptions = {
-            center: { lat: lat, lng: lon },
-            zoom: 13
-        };
-        
-        map = new google.maps.Map(
-            document.getElementById('map'),
-            mapOptions
-        );
+// Function to generate random image
+function generateRandomImage() {
+    // Array of luxury watch brands for random insertion
+    const watchBrands = ['Rolex', 'Patek Philippe', 'Audemars Piguet', 'Omega', 'Cartier', 'Vacheron Constantin', 'IWC', 'Jaeger-LeCoultre'];
+    
+    // Array of luxury-themed taglines
+    const taglines = [
+        'Timeless Elegance',
+        'Mastery of Time',
+        'Precision & Luxury',
+        'Heritage of Excellence',
+        'Crafted Perfection',
+        'Horological Excellence',
+        'Ultimate Sophistication',
+        'Luxury Defined'
+    ];
 
-        marker = new google.maps.Marker({
-            position: { lat: lat, lng: lon },
-            map: map,
-            title: 'Your Location'
-        });
-    }
+    // Array of background gradients
+    const gradients = [
+        'linear-gradient(45deg, #ff6b6b, #4ecdc4)',
+        'linear-gradient(45deg, #2c3e50, #3498db)',
+        'linear-gradient(45deg, #000000, #434343)',
+        'linear-gradient(45deg, #614385, #516395)',
+        'linear-gradient(45deg, #141E30, #243B55)',
+        'linear-gradient(to right, #000046, #1CB5E0)',
+        'linear-gradient(to right, #0f0c29, #302b63, #24243e)',
+        'linear-gradient(to right, #780206, #061161)'
+    ];
 
-    getLocationBtn.addEventListener('click', function() {
-        locationStatus.innerHTML = 'Requesting your location...';
-        locationResult.innerHTML = `
-            <div id="map" style="height: 400px; width: 100%; margin-top: 20px; border-radius: 10px;"></div>
-            <div id="weatherInfo" class="weather-info"></div>
-        `;
-
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                position => {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
-                    locationStatus.innerHTML = 'Location found! Loading map...';
-                    
-                    // Initialize map with location
-                    initMap(lat, lon);
-                    
-                    // Get weather data
-                    getLocationWeather(lat, lon);
-                },
-                error => {
-                    handleLocationError(error);
-                }
-            );
-        } else {
-            locationStatus.innerHTML = 'Geolocation is not supported by your browser';
-        }
-    });
-
-    function getLocationWeather(lat, lon) {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
-            .then(response => response.json())
-            .then(data => {
-                displayWeatherInfo(data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('weatherInfo').innerHTML = 'Error getting weather data. Please try again.';
-            });
-    }
-
-    function displayWeatherInfo(weatherData) {
-        const weatherInfo = document.getElementById('weatherInfo');
-        weatherInfo.innerHTML = `
-            <div class="weather-card">
-                <h3>${weatherData.name}</h3>
-                <div class="weather-details">
-                    <p><i class="fas fa-temperature-high"></i> Temperature: ${weatherData.main.temp.toFixed(1)}°C</p>
-                    <p><i class="fas fa-tint"></i> Humidity: ${weatherData.main.humidity}%</p>
-                    <p><i class="fas fa-wind"></i> Wind: ${weatherData.wind.speed} m/s</p>
-                    <p><i class="fas fa-cloud"></i> Weather: ${weatherData.weather[0].description}</p>
-                    <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png" 
-                         alt="${weatherData.weather[0].description}">
+    const randomStyles = [
+        {
+            html: `<div style="
+                background: ${gradients[Math.floor(Math.random() * gradients.length)]};
+                padding: 40px;
+                border-radius: 15px;
+                text-align: center;
+                font-family: 'Playfair Display', serif;
+            ">
+                <h1 style="color: gold; font-size: 42px; margin-bottom: 20px;">
+                    ${watchBrands[Math.floor(Math.random() * watchBrands.length)]}
+                </h1>
+                <p style="color: white; font-size: 24px;">
+                    ${taglines[Math.floor(Math.random() * taglines.length)]}
+                </p>
+                <p style="color: #ddd; font-size: 18px; margin-top: 20px;">
+                    ${new Date().toLocaleDateString()}
+                </p>
+            </div>`,
+            css: `@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');`
+        },
+        {
+            html: `<div style="
+                background: white;
+                padding: 40px;
+                border-radius: 15px;
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                border: 4px solid ${['#gold', '#silver', '#1a1a1a'][Math.floor(Math.random() * 3)]};
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            ">
+                <h1 style="color: #1a1a1a; font-size: 38px; margin-bottom: 20px;">
+                    ${watchBrands[Math.floor(Math.random() * watchBrands.length)]}
+                </h1>
+                <p style="color: #666; font-size: 22px;">
+                    ${taglines[Math.floor(Math.random() * taglines.length)]}
+                </p>
+                <div style="margin-top: 20px; font-size: 16px; color: #999;">
+                    Est. ${Math.floor(Math.random() * (2024 - 1800 + 1) + 1800)}
                 </div>
+            </div>`,
+            css: `@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');`
+        }
+    ];
+
+    const randomStyle = randomStyles[Math.floor(Math.random() * randomStyles.length)];
+    
+    fetch('https://hcti.io/v1/image', {
+        method: 'POST',
+        body: JSON.stringify({
+            html: randomStyle.html,
+            css: randomStyle.css,
+            google_fonts: "Roboto|Playfair Display|Montserrat"
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic ' + btoa(API_ID + ":" + API_KEY)
+        }
+    })
+    .then(response => response.json())
+    .then(imageData => {
+        document.getElementById('locationResult').innerHTML = `
+            <div class="generated-image">
+                <img src="${imageData.url}" alt="Random Generated Image">
+                <a href="${imageData.url}" download="luxury-watch.png" class="download-button">
+                    Download Image
+                </a>
             </div>
         `;
-    }
+    })
+    .catch(error => {
+        console.error('Error generating random image:', error);
+        document.getElementById('locationResult').innerHTML = `
+            <div class="error-message">
+                <p>Failed to generate random image. Please try again.</p>
+            </div>
+        `;
+    });
+}
 
-    function handleLocationError(error) {
-        switch(error.code) {
-            case error.PERMISSION_DENIED:
-                locationStatus.innerHTML = "Location access was denied. Please enable location services.";
-                break;
-            case error.POSITION_UNAVAILABLE:
-                locationStatus.innerHTML = "Location information is unavailable.";
-                break;
-            case error.TIMEOUT:
-                locationStatus.innerHTML = "Location request timed out.";
-                break;
-            default:
-                locationStatus.innerHTML = "An unknown error occurred.";
-                break;
-        }
+// Add event listener when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const generateRandomBtn = document.getElementById('generateRandomBtn');
+    if (generateRandomBtn) {
+        generateRandomBtn.addEventListener('click', generateRandomImage);
     }
-}); 
+});
